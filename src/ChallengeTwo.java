@@ -1,15 +1,21 @@
 import java.util.Random;
-
+import java.util.Scanner;
 import java.util.ArrayList;
 
 public class ChallengeTwo {
+    public static int randomNumber(int x) {
+        Random random = new Random();
+        int num = random.nextInt(x);
+        return num;
+    }
+
 
     public static void main(String[] args) {
 
-        Random r1 = new Random();
+        // Random r1 = new Random();
 
-        int itemC = 0;
-        //String userResponse = "";
+        // int itemC = 0;
+        // String userResponse = "";
 
 
         ArrayList<ArrayList<String>> myL = new ArrayList<ArrayList<String>>(11);
@@ -55,58 +61,47 @@ public class ChallengeTwo {
 
         myL.add(veggies);
 
-        //    int index = salsa.size();
-      //      int index2 = meat.size();
-       //     int index3 = beans.size();
-        //   int index4 = rice.size();
-       //    int index5 = veggies.size();
-       //     do {
-        //       int salsaIndex = r1.nextInt(index);
-         //       String randomsalsa = salsa.get(salsaIndex);
+        String input = "";
 
-          //      int meatIndex = r1.nextInt(index2);
-          //      String randommeat = meat.get(meatIndex);
-
-             //   int beansIndex = r1.nextInt(index3);
-             //   String randombeans = beans.get(beansIndex);
-
-             //   int riceIndex = r1.nextInt(index4);
-             //   String randomrice = rice.get(riceIndex);
-
-             //   int veggiesIndex = r1.nextInt(index5);
-             //   String randomveggies = veggies.get(veggiesIndex);
-
-             //   System.out.println();
-        //  }
-         //   while (!userResponse.equalsIgnoreCase("n"));
-      //  r1.close();
 
         for (int x = 1; x < 11; x++) {
             ArrayList<String> myO = new ArrayList<String>();
-            myO.add(myL.get(0).get(r1.nextInt(salsa.size()))+
 
-                   "," + myL.get(1).get(r1.nextInt(beans.size())) +
+            while (!input.equalsIgnoreCase("n")) {
 
-                    "," + myL.get(2).get(r1.nextInt(meat.size()))+
 
-                   "," + myL.get(3).get(r1.nextInt(rice.size()))+
+                System.out.print("Burrito " + x+ " : " + myL.get(randomNumber(myL.size())) + "\n");
+                break;
 
-                    "," + myL.get(4).get(r1.nextInt(veggies.size())));
 
-            for(String ing1:myO){
+                //   for (int x = 1; x < 11; x++) {
+                //  ArrayList<String> myO = new ArrayList<String>();
+                //  myO.add(myL.get(0).get(r1.nextInt(salsa.size()))+
+                //                    "," + myL.get(1).get(r1.nextInt(beans.size())) +
 
-               if (ing1.contains("no")){
+                //   "," + myL.get(2).get(r1.nextInt(meat.size()))+
+                //     "," + myL.get(3).get(r1.nextInt(rice.size()))+
 
-                   itemC=+1;
-              }
-              System.out.println("Burrito " + x + " : " + ing1 );
+                //   "," + myL.get(4).get(r1.nextInt(veggies.size())));
+
+                //   for(String ing1:myO){
+
+                //   if (ing1.contains("No")){
+
+                //    itemC=+1;
+                //  }
+
+
+                //  System.out.println("Burrito " + x + " : " + ing1 );
+
+                // }
+
+                // }
 
             }
 
-       }
-
+        }
     }
-
 }
 
 
