@@ -81,14 +81,8 @@ public class ChallengeTwo {
          //   while (!userResponse.equalsIgnoreCase("n"));
       //  r1.close();
 
-
-
-
         for (int x = 1; x < 11; x++) {
             ArrayList<String> myO = new ArrayList<String>();
-
-
-
             myO.add(myL.get(0).get(r1.nextInt(salsa.size()))+
 
                    "," + myL.get(1).get(r1.nextInt(beans.size())) +
